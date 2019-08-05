@@ -2,7 +2,7 @@ var fs = require('fs');
 const path = require('path');
 
 
-module.exports = async (pathDir, name) => {
+module.exports = (pathDir, name) =>{
     var dir = pathDir + name;
 
     if (!fs.existsSync(dir)){

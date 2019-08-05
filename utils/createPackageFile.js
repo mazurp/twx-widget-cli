@@ -1,15 +1,15 @@
 const fs = require('fs');
 const path = require('path');
 
-module.exports = async (pathDir) => {
+module.exports = (pathDir, options) =>{
     let packageJSON = {
         "name": "name",
         "version": "1.0.0",
-        "description": "Example of a widget built using typescript, babel and webpack",
-        "thingworxServer": "http://localhost:8016",
-        "thingworxUser": "Administrator",
-        "thingworxPassword": "trUf6yuz2?_Gub",
-        "author": "Thingworx RoIcenter",
+        "description": "",
+        "thingworxServer": "",
+        "thingworxUser": "",
+        "thingworxPassword": "",
+        "author": "",
         "minimumThingWorxVersion": "6.0.0",
         "scripts": {
             "test": "echo \"Error: no test specified\" && exit 1",
@@ -50,15 +50,25 @@ module.exports = async (pathDir) => {
             "typescriptwebpacksupport": "github:stefan-lacatus/ThingworxWidgetSupportPackage#master"
         }
     };
-  packageJSON.name = 'dupa';
-  var fileName = pathDir + path.sep + 'package.json';
+  packageJSON.name = options.name ? options.name : '';
+  packageJSON.description = options.description ? options.description : '';
+  packageJSON.author = options.author ? options.author : '';
+  packageJSON.minimumThingWorxVersion = options.minimumThingWorxVersion ? options.minimumThingWorxVersion : '';
 
-  console.log('fileName: ' + fileName);
-  fs.writeFile(fileName, packageJSON, () => {
-    console.log(packageJSON);
+  if(options.autoDeploy){
+    packageJSON.thingworxServer = options.url ? options.url : '';
+    packageJSON.thingworxUser = options.username ? options.username : '';
+    packageJSON.thingworxPassword = options.pass ? options.pass : '';
+  }
+
+  let fileName = pathDir + path.sep + 'package.json';
+
+  let data = JSON.stringify(packageJSON, null, 3);
+
+  fs.writeFileSync(fileName, data, () => {
+    return fileName;
   });
-
-  return fileName;
+  return null;
 }
 
 

@@ -1,2 +1,5 @@
-# twx-widget-cli
-npm cli to generate Thingworx widget project
+# twx-widget
+
+A CLI app to generate twx widget project
+
+

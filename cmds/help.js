@@ -4,12 +4,21 @@ const menus = {
 
     init .............. create new widget project
     version ............ show package version
-    help ............... show help menu for a command`,
+    help ............... show help menu for a command
+    
+    type 'twx-widget [command]' for more info about specify command`,
 
     init: `
-    twx-widget today <options>
+    twx-widget init
 
-    --location, -l ..... the location to use`,
+    -n..... name of widget
+    -d..... description of widget
+    -t..... minimum Thingworx version
+    -a..... author/vendor of widget
+    -r..... auto deploy (true/false)
+    -s..... URL TWX for auto deploy
+    -u..... TWX username
+    -p..... TWX password`,
 
 }
 

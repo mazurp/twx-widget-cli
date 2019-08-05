@@ -19,10 +19,20 @@
   "scripts": {},
   "devDependencies": {},
   "dependencies": {
+    "arg": "^4.1.1",
     "axios": "^0.18.1",
+    "chalk": "^2.4.2",
+    "copy-dir": "^1.1.0",
+    "execa": "^2.0.3",
     "fs": "0.0.1-security",
+    "inquirer": "^6.5.0",
+    "listr": "^0.14.3",
+    "meta-url": "^1.0.4",
     "minimist": "^1.2.0",
     "ora": "^2.0.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "pkg-install": "^1.0.0",
+    "shelljs": "^0.8.3",
+    "url": "^0.11.0"
   }
 }
