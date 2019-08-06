@@ -3,6 +3,7 @@ const menus = {
     twx-widget [command] <options>
 
     init .............. create new widget project
+    build ............... build widget
     version ............ show package version
     help ............... show help menu for a command
     

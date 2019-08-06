@@ -19,6 +19,14 @@ module.exports = () => {
       require('./cmds/init')(args)
       break
 
+    case 'build':
+      require('./cmds/build')(args)
+      break
+
+    case 'deploy':
+      require('./cmds/deploy')(args)
+      break
+
     case 'version':
       require('./cmds/version')(args)
       break
