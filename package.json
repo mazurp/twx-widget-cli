@@ -1,5 +1,5 @@
 {
-  "name": "twx-widget",
+  "name": "@mazurp/twx-widget",
   "version": "1.0.0",
   "description": "A CLI app that allow us create widget project",
   "license": "MIT",
