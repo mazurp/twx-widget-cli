@@ -5,7 +5,7 @@ Thingworx Widget CLI is a command line application to allow developers to build 
 # Installation
 Run the following command to install the widget cli globally.
 ```sh
-$ npm i @mazurp/twx-widget
+$ npm install -g @mazurp/twx-widget
 ```
 ### Creating your first connector project
 Run the following command to install the widget cli globally.
