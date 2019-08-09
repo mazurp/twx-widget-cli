@@ -7,6 +7,7 @@ var shell = require('shelljs');
 
 const createDirectory = require('../utils/createDirectory')
 const createPackageFile = require('../utils/createPackageFile')
+const createPackageLockFile = require('../utils/createPackageLockFile')
 const parseArgumentsIntoOptions = require('../utils/parseArgumentsIntoOptions')
 const promptForMissingOptions = require('../utils/promptForMissingOptions')
 const moveTemplate = require('../utils/moveTemplate')
@@ -30,6 +31,7 @@ module.exports = async (args) => {
           title: 'Create package.json file',
           task: () => {
             jsonPath = createPackageFile(dirPath, options)
+            createPackageLockFile(dirPath)
           }
         },
         {
