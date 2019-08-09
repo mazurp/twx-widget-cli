@@ -1059,7 +1059,7 @@ module.exports = (pathDir) =>{
 
   let fileName = pathDir + path.sep + 'package-lock.json';
 
-  let data = JSON.stringify(packageJSON, null, 3);
+  let data = JSON.stringify(packageLockJSON, null, 3);
 
   fs.writeFileSync(fileName, data, () => {
     return fileName;
