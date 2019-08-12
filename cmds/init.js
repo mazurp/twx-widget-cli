@@ -8,9 +8,12 @@ var shell = require('shelljs');
 const createDirectory = require('../utils/createDirectory')
 const createPackageFile = require('../utils/createPackageFile')
 const createPackageLockFile = require('../utils/createPackageLockFile')
+const adeptIdeFile = require('../utils/adeptIdeFile')
 const parseArgumentsIntoOptions = require('../utils/parseArgumentsIntoOptions')
 const promptForMissingOptions = require('../utils/promptForMissingOptions')
 const moveTemplate = require('../utils/moveTemplate')
+
+
 
 
 module.exports = async (args) => {
@@ -36,7 +39,10 @@ module.exports = async (args) => {
         },
         {
           title: 'Create Template',
-          task: () => moveTemplate(dirPath),
+          task: () => {
+          moveTemplate(dirPath)
+          adeptIdeFile(dirPath, options.name)
+          }
         },
         {
           title: 'Install dependencies',

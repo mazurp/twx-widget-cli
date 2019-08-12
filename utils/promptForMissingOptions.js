@@ -91,7 +91,7 @@ module.exports = async (options) => {
         return {
             ...tempOpions,
             url: options.url || answers.url,
-            username: options.pass || answers.pass,
+            username: options.username || answers.username,
             pass: options.pass || answers.pass
         };
 

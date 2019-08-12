@@ -1,6 +1,6 @@
 {
   "name": "@mazurp/twx-widget",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A CLI app that allow us create widget project",
   "license": "MIT",
   "homepage": "https://github.com/mazurp/twx-widget-cli#readme",
@@ -32,6 +32,7 @@
     "ora": "^2.0.0",
     "path": "^0.12.7",
     "pkg-install": "^1.0.0",
+    "replace-in-file": "^4.1.2",
     "shelljs": "^0.8.3",
     "url": "^0.11.0"
   }
