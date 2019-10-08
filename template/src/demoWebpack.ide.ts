@@ -11,31 +11,31 @@ class DemoWebpackWidget extends TWComposerWidget {
     widgetProperties(): TWWidgetProperties {
         require("./styles/ide.css");
         return {
-            'name': 'TypescriptWebpackWidget',
-            'description': 'An example widget showing how you can use modern web developent tech',
-            'category': ['Common'],
-            'supportsAutoResize': true,
-            'properties': {
-                'Width': {
-                    'description': 'Total width of the widget',
-                    'baseType': 'NUMBER',
-                    'isVisible': true,
-                    'defaultValue': 90,
-                    'isBindingTarget': false
+            name: 'TypescriptWebpackWidget',
+            description: 'An example widget showing how you can use modern web developent tech',
+            category: ['Common'],
+            supportsAutoResize: false,
+            properties: {
+                Width: {
+                    description: 'Total width of the widget',
+                    baseType: 'NUMBER',
+                    isVisible: true,
+                    defaultValue: 90,
+                    isBindingTarget: false
                 },
-                'Height': {
-                    'description': 'Total height of the widget',
-                    'baseType': 'NUMBER',
-                    'isVisible': true,
-                    'defaultValue': 30,
-                    'isBindingTarget': false
+                Height: {
+                    description: 'Total height of the widget',
+                    baseType: 'NUMBER',
+                    isVisible: true,
+                    defaultValue: 30,
+                    isBindingTarget: false
                 },
-                'Value': {
-                    'description': 'Test',
-                    'baseType': 'STRING',
-                    'isVisible': true,
-                    'defaultValue': "test",
-                    'isBindingTarget': true
+                Value: {
+                    description: 'Test',
+                    baseType: 'STRING',
+                    isVisible: true,
+                    defaultValue: "test",
+                    isBindingTarget: true
                 }
             }
         };

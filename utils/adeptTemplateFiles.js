@@ -1,15 +1,21 @@
 const replace = require('replace-in-file');
 const path = require('path');
 
-module.exports = (pathDir, name) =>{
+module.exports = (pathDir, name, description) =>{
 
   let ideFileName = pathDir + path.sep + 'src' + path.sep + 'demoWebpack.ide.ts';
   let runtimeFileName = pathDir + path.sep + 'src' + path.sep + 'demoWebpack.runtime.ts';
 
   const optionsWidgetName = {
     files: ideFileName,
-    from: "'name': 'TypescriptWebpackWidget',",
-    to: "'name': '" + name +"',",
+    from: "name: 'TypescriptWebpackWidget',",
+    to: "name: '" + name +"',",
+  };
+
+  const optionsWidgetName = {
+    files: ideFileName,
+    from: "description: 'An example widget showing how you can use modern web developent tech'",
+    to: "description: '" + description +"',",
   };
 
   const optionsIdeClassName = {

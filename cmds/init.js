@@ -41,7 +41,7 @@ module.exports = async (args) => {
           title: 'Create Template',
           task: () => {
           moveTemplate(dirPath)
-          adeptTemplateFiles(dirPath, options.name)
+          adeptTemplateFiles(dirPath, options.name, options.description)
           }
         },
         {
