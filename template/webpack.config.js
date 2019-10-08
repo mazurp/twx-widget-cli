@@ -18,7 +18,8 @@ const uploadEnabled = process.argv.indexOf('--env.upload') !== -1;
 
 // first, increment the version in package.json
 let packageVersion = packageJson.version.split('.');
-packageJson.version = `${packageVersion[0]}.${packageVersion[1]}.${parseInt(packageVersion[2])}`;
+let buildVersion = parseInt(packageVersion[2]) + 1;
+packageJson.version = `${packageVersion[0]}.${packageVersion[1]}.${buildVersion}`;
 console.log(`Incremented package version to ${packageJson.version}`);
 fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 4));
 module.exports = function (env, argv) {
