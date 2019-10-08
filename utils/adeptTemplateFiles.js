@@ -12,7 +12,7 @@ module.exports = (pathDir, name, description) =>{
     to: "name: '" + name +"',",
   };
 
-  const optionsWidgetName = {
+  const optionsWidgetDescription = {
     files: ideFileName,
     from: "description: 'An example widget showing how you can use modern web developent tech'",
     to: "description: '" + description +"',",
@@ -32,6 +32,7 @@ module.exports = (pathDir, name, description) =>{
 
   try {
     replace.sync(optionsWidgetName);
+    replace.sync(optionsWidgetDescription);
     replace.sync(optionsIdeClassName);
     replace.sync(optionsRuntimeClassName);
   }
